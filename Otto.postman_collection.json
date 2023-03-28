@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "386a8e32-bcfa-40a5-9c27-d226f0a9316c",
+		"name": "Otto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1948898"
+	},
+	"item": [
+		{
+			"name": "Post price",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"articleId\": \"123456\", \"sellingPrice\": 9.99, \"validFrom\": \"2022-04-01T00:00:00Z\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post item change",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"CHANGED\", \"articleId\": \"123456\", \"packingUnitIds\": [\"pack1\", \"pack2\"]}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post item delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"DELETED\", \"articleId\": \"123456\", \"packingUnitIds\": [\"pack1\", \"pack2\"]}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post packing unit pack1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"packingUnitId\": \"pack1\", \"width\": 10.5, \"height\": 5.5, \"length\": 15.2, \"weight\": 2.1}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/packing-unit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"packing-unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post packing unit pack2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"packingUnitId\": \"pack2\", \"width\": 45.5, \"height\": 9.2, \"length\": 42.2, \"weight\": 45.1}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/packing-unit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"packing-unit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
